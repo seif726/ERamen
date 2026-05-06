@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Seif Zaky">
+
+    <title>ERamen - Seif</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="../home/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <section class="flex">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            <img src="../assets/ERamen Logo Whole.png" alt="">
+        </a>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <a href="../home/index.html" class="home">
+                HOME
+            </a>
+
+            <a href="../menu/ourmenu.html" class="home">
+                OUR MENU
+            </a>
+
+            <a href="../promo/promo.html" class="home">
+                PROMO
+            </a>
+
+            <a href="../about us/aboutus.html" class="home">
+                ABOUT US
+            </a>
+
+            <a href="../contact us/contactus.html" class="home">
+                CONTACT US
+            </a>
+
+            <!-- LOGIN BUTTON -->
+            <a href="../auth/login.html"
+               id="login-btn"
+               class="login-btn">
+
+               LOGIN
+
+            </a>
+
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
+
+</header>
+
+<!-- HOME -->
+<div class="home-bg">
+
+    <section class="home" id="home">
+
+        <div class="content">
+
+            <h3>Smart Food Experience.</h3>
+
+            <p>
+                Find The Comfort Inside Our Ramen
+            </p>
+
+            <a href="../about us/aboutus.html"
+               class="btn">
+
+               About Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- POPULAR MENU -->
+<section class="popmenu" id="popmenu">
+
+    <div class="heading">
+
+        <h3>
+            <span>Popular</span> Menu
+        </h3>
+
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+
+            <a href="../menu/ourmenu.html">
+
+                <figure>
+                    <img src="../assets/Shio.jpg" alt="">
+                </figure>
+
+                <h3>Shio</h3>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEW MENU -->
+<section class="newmenu" id="newmenu">
+
+    <div class="heading">
+
+        <h3>
+            <span>New</span> Menu
+        </h3>
+
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+
+            <a href="../menu/ourmenu.html">
+
+                <figure>
+                    <img src="../assets/Tantanmen.jpg" alt="">
+                </figure>
+
+                <h3>Tantanmen</h3>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BANNER -->
+<section class="banner" id="banner">
+
+    <div class="banner-heading">
+
+        <h3>The Bestest Combo!</h3>
+
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+
+            <a href="../menu/ourmenu.html">
+
+                <figure>
+
+                    <img src="../assets/Banner.png"
+                         alt=""
+                         class="banner-img">
+
+                </figure>
+
+            </a>
+
+        </div>
+
+        <a href="../menu/ourmenu.html"
+           class="btn">
+
+           Try it now!
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+
+    <div class="social">
+
+        <a href="">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="">
+            <i class="fab fa-twitter"></i>
+        </a>
+
+        <a href="">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+
+    <ul class="list">
+
+        <li>
+            <a href="../home/index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="../menu/ourmenu.html">
+                Our Menu
+            </a>
+        </li>
+
+        <li>
+            <a href="../promo/promo.html">
+                Promo
+            </a>
+        </li>
+
+        <li>
+            <a href="../about us/aboutus.html">
+                About Us
+            </a>
+        </li>
+
+        <li>
+            <a href="../contact us/contactus.html">
+                Contact Us
+            </a>
+        </li>
+
+        <!-- FOOTER LOGIN -->
+        <li>
+
+            <a href="../auth/login.html"
+               id="footer-login-btn"
+               class="login-btn">
+
+               LOGIN
+
+            </a>
+
+        </li>
+
+    </ul>
+
+    <p class="copyright">
+
+        ©2026 Seif Zaki. All rights reserved
+
+    </p>
+
+</section>
+
+<!-- JS -->
+<script src="../home/script.js"></script>
+
+<!-- LOGIN / LOGOUT SYSTEM -->
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    let currentUser =
+        localStorage.getItem("ERamenCurrentUser");
+
+    let loginBtn =
+        document.getElementById("login-btn");
+
+    let footerLoginBtn =
+        document.getElementById("footer-login-btn");
+
+    // USER LOGGED IN
+    if(currentUser){
+
+        // NAVBAR BUTTON
+        if(loginBtn){
+
+            loginBtn.innerHTML =
+                `<i class="fas fa-user"></i> ${currentUser}`;
+
+            loginBtn.addEventListener("click", (e) => {
+
+                e.preventDefault();
+
+                let confirmLogout =
+                    confirm("Do you want to logout?");
+
+                if(confirmLogout){
+
+                    localStorage.removeItem(
+                        "ERamenCurrentUser"
+                    );
+
+                    window.location.reload();
+
+                }
+
+            });
+
+        }
+
+        // FOOTER BUTTON
+        if(footerLoginBtn){
+
+            footerLoginBtn.innerHTML =
+                `<i class="fas fa-user"></i> ${currentUser}`;
+
+            footerLoginBtn.addEventListener("click", (e) => {
+
+                e.preventDefault();
+
+                let confirmLogout =
+                    confirm("Do you want to logout?");
+
+                if(confirmLogout){
+
+                    localStorage.removeItem(
+                        "ERamenCurrentUser"
+                    );
+
+                    window.location.reload();
+
+                }
+
+            });
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
