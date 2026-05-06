@@ -1,0 +1,218 @@
+/* This is CSS File for OUR MENU PAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Main Components (Colors): Start */
+:root{
+    --main-color: #8A3033;
+    --light-color: #EADEDA;
+    --black: #000000;
+    --white: #ffffff;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1 rem rgb(255, 255, 255);
+}
+
+*{
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+*::selection{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    margin: 0;
+}
+
+/* HEADING */
+.heading{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+}
+.heading span{ color: #8A3033; }
+.heading h3{ font-weight: 800; }
+
+/* BUTTON */
+.btn{
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color:var(--white);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+}
+.btn:hover{ background-color:#361213; }
+
+/* HEADER - NAVIGATION BAR */
+.header{
+    position: sticky; top: 0; left: 0; right: 0;
+    background-color: var(--black);
+    box-shadow: var(--box-shadow); z-index: 1000;
+}
+.header .flex{
+    display: flex; align-items: center; justify-content: space-between; position: relative; padding: 1.5rem 2rem;
+}
+.header .flex .logo img{ height: 5rem; }
+.header .flex .navbar a{
+    margin-left: 2rem; font-size: 1.5rem; color:var(--white); white-space: nowrap;
+}
+.header .flex .navbar a:hover{ text-decoration: solid; color:var(--main-color); }
+#menu-btn{
+    display: none; font-size: 2.5rem; color: var(--white); cursor: pointer;
+}
+
+section{
+    padding: 3rem 2rem; max-width: 1200px; margin: 0 auto;
+}
+
+/* Menu */
+.center-text{
+    margin-top: 5rem; text-align: center;
+}
+.center-text h3{ font-size: 4rem; font-weight: 800; }
+.center-text h3 span{ color: var(--main-color); }
+.menu-content{
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 2rem; align-items: center; margin-top: 4.5rem;
+}
+.box{
+    padding: 15px 50px 15px 50px; background: #ffffff;
+    box-shadow: 0px 5px 40px rgb(19 8 73 / 13%);
+    border-radius: 20px; transition: all .40s ease; height: auto; width: 100%;
+}
+.box:hover{ box-shadow: 0 0 11px rgba(138,33,33,1); }
+.box-content{
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+}
+.box-img img{
+    width: 100%; height: auto; object-fit: cover; transition: .3s ease-in-out;
+}
+.box-text h4{ margin-top: 20px; font-size: 1.7rem; }
+.box-text p{ font-size: 1.3rem; text-transform: none; }
+.drinks{ margin-bottom: 10rem; }
+
+/* Footer */
+.footer{
+    padding: 40px 0; width: 100%; margin: 0; background-color: var(--light-color); max-width: 100%;
+}
+.footer .social{
+    text-align: center; padding-bottom: 25px; color: var(--main-color);
+}
+.footer .social a{
+    font-size: 2rem; color: var(--main-color); border: 1px solid;
+    width: 40px; height: 40px; line-height: 38px; display: inline-block;
+    text-align: center; border-radius: 50%; margin: 0 8px; opacity: .65;
+}
+.footer .social a:hover{ opacity: 1; }
+.footer ul{
+    margin-top: 0; padding: 0; list-style: none; font-size: 1.7rem; line-height: 1.6; margin-bottom: 0; text-align: center;
+}
+.footer ul a{ color: var(--main-color); text-decoration: none; opacity: .65; }
+.footer ul li{ display: inline-block; padding: 0 10px; }
+.footer ul li a:hover{ opacity: 1; }
+.footer .copyright{
+    margin-top: 15px; text-align: center; font-size: 1.3rem; color:var(--main-color); opacity: .4;
+}
+
+/* 🛒 Shopping Cart CSS 🛒 */
+.cart-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); z-index: 1001;
+    display: none; transition: .3s;
+}
+.cart-sidebar {
+    position: fixed; top: 0; right: -400px; 
+    width: 350px; height: 100%; background: var(--light-color);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2); z-index: 1002;
+    display: flex; flex-direction: column; transition: right 0.3s ease-in-out;
+}
+.cart-sidebar.active { right: 0; }
+.cart-header {
+    background: var(--main-color); color: var(--white); padding: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.cart-header h2 { font-size: 2rem; }
+.cart-items { flex: 1; padding: 20px; overflow-y: auto; }
+.cart-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--white); padding: 10px; margin-bottom: 15px; border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.cart-item img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.cart-item-details { flex: 1; margin-left: 15px; }
+.cart-item-details h4 { font-size: 1.5rem; color: var(--black); }
+.cart-item-details p { font-size: 1.3rem; color: var(--main-color); font-weight: bold; }
+
+.remove-btn { color: red; font-size: 1.8rem; cursor: pointer; transition: 0.2s; }
+.remove-btn:hover { color: darkred; transform: scale(1.1); }
+
+.cart-footer { background: var(--white); padding: 20px; border-top: 2px solid var(--black); }
+.cart-footer h3 { font-size: 2rem; text-align: right; color: var(--black); }
+
+/* Media Queries */
+@media (max-width:991px){
+    html{ font-size: 40%; }
+    .box{ width: 100%; height: auto; }
+    .box-img img{ max-width: 100%; height: auto; }
+    .box-text h4{ font-size: 2rem; }
+    .box-text p{ font-size: 1.7rem; text-transform: none; }
+}
+
+@media (max-width:768px){
+    #menu-btn{ display: inline-block; transition: .2s linear; }
+    #menu-btn.fa-times{ transform: rotate(180deg); }
+    .header .flex .navbar{
+        position: absolute; top: 95%; left: 0; right: 0; background-color: var(--black);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: .2s linear;
+    }
+    .header .flex .navbar.active{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+    .header .flex .navbar a{ display: block; margin: 2rem; }
+    .box{ max-width: 100%; height: auto; }
+    .box-img img{ max-width: 100%; height: auto; }
+    .box-text h4{ font-size: 2.5rem; }
+    .box-text p{ font-size: 2rem; text-transform: none; }
+}
+
+@media (max-width:450px){
+    html{ font-size: 30%; }
+    .header{ width: 100%; }
+    .menu-content{ display:block; }
+    .box{ width: 100%; height: auto; margin-bottom: 2rem; }
+    .box-img img{ width: 100%; height: auto; }
+    .box-text h4{ font-size: 3rem; }
+    .box-text p{ font-size: 2rem; text-transform: none; }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERamen - Login / Sign Up</title>
+    <link rel="stylesheet" href="style_auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER: Start -->
+    <header class="header">
+        <section class="flex">
+            <a href="../home/index.html" class="logo"><img src="../assets/ERamen Logo Whole.png" alt=""></a>
+            <nav class="navbar">
+                <a href="../home/index.html" class="home">HOME</a>
+                <a href="../menu/ourmenu.html" class="home">OUR MENU</a>
+                <a href="../promo/promo.html" class="home">PROMO</a>
+                <a href="../about us/aboutus.html" class="home">ABOUT US</a>
+                <a href="../contact us/contactus.html" class="home">CONTACT US</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+    <!-- HEADER: End -->
+
+    <section class="auth-section">
+        <div class="auth-container">
+            
+            <!-- Sign Up Form -->
+            <div class="form-box" id="signup-box">
+                <h2>Create Account</h2>
+                <div id="signup-error" class="error-message"></div>
+                <div class="input-row">
+                    <input type="text" id="signup-name" placeholder="Your Name" required>
+                </div>
+                <div class="input-row">
+                    <input type="email" id="signup-email" placeholder="E-mail" required>
+                </div>
+                <div class="input-row">
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                </div>
+                <button class="btn" onclick="signUp()">Sign Up</button>
+                <p class="toggle-text">Already have an account? <span onclick="toggleForms()">Sign In</span></p>
+            </div>
+
+            <!-- Sign In Form (Hidden by default) -->
+            <div class="form-box" id="signin-box" style="display: none;">
+                <h2>Welcome Back</h2>
+                <div id="signin-error" class="error-message"></div>
+                <div class="input-row">
+                    <input type="email" id="signin-email" placeholder="E-mail" required>
+                </div>
+                <div class="input-row">
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                </div>
+                <button class="btn" onclick="signIn()">Sign In</button>
+                <p class="toggle-text">Don't have an account? <span onclick="toggleForms()">Sign Up</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script_auth.js"></script>
+</body>
+</html>

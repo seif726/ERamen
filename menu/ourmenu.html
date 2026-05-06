@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seif Zaky">
+    <title>ERamen - Our Menu</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style_menu.css">
+
+    <!-- Link of Awesome Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- HEADER: Start -->
+    <header class="header">
+        <section class="flex">
+            <a href="../home/index.html" class="logo"><img src="../assets/ERamen Logo Whole.png" alt=""></a>
+
+            <nav class="navbar">
+                <a href="../home/index.html" class="home">HOME</a>
+                <a href="../menu/ourmenu.html" class="home">OUR MENU</a>
+                <a href="../promo/promo.html" class="home">PROMO</a>
+                <a href="../about us/aboutus.html" class="home">ABOUT US</a>
+                <a href="../contact us/contactus.html" class="home">CONTACT US</a>
+                <!-- أيقونة عربة التسوق -->
+                <a href="#" class="home" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i> <span id="cart-count" style="background: var(--main-color); color: white; padding: 2px 6px; border-radius: 50%; font-size: 1.2rem;">0</span></a>
+            </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+        </section>
+    </header>
+    <!-- HEADER: End -->
+
+    <!-- RAMEN MENU: Start -->
+    <section class="ramen-menu" id="ramen-menu">
+        <div class="center-text">
+            <h3><span>Ramen</span> Bowl</h3>
+        </div>
+        <div class="menu-content">
+
+            <!-- MISO -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Miso.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Miso</h4>
+                        <p>Soy beans paste based ramen that is served with eggs, chicken chashu, nori, and spring onions.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$12.00</h3>
+                        <button class="btn" onclick="addToCart('Miso', 12.00, '../assets/Miso.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHOYU -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Shoyu.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Shoyu</h4>
+                        <p>Soy sauce based ramen with simmered chicken broth, boiled eggs, chicken chashu, nori, and spring onions.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$11.50</h3>
+                        <button class="btn" onclick="addToCart('Shoyu', 11.50, '../assets/Shoyu.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHIO -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Shio.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Shio</h4>
+                        <p>Salt based ramen with chicken bone broth, boiled eggs, chicken chashu, nori, and spring onions. </p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$11.00</h3>
+                        <button class="btn" onclick="addToCart('Shio', 11.00, '../assets/Shio.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TSUKEMEN -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Tsukemen.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Tsukemen</h4>
+                        <p>Separate noodles dipped in thick soy sauce-based broth, served with eggs, chicken chashu, nori, and spring onions.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$13.00</h3>
+                        <button class="btn" onclick="addToCart('Tsukemen', 13.00, '../assets/Tsukemen.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TANTANMEN -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Tantanmen.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Tantanmen</h4>
+                        <p>Sesame-peanut ramen broth with soy milk and chicken bones, served with boiled eggs, chicken chashu, nori, and spring onions.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$12.50</h3>
+                        <button class="btn" onclick="addToCart('Tantanmen', 12.50, '../assets/Tantanmen.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- RAMEN MENU: End -->
+
+    <!-- TEMPURA DISH: Start -->
+    <section class="tempura-dish" id="tempura-dish">
+        <div class="center-text">
+            <h3><span>Tempura</span> Dish</h3>
+        </div>
+        <div class="menu-content">
+
+            <!-- EBI TEMPURA -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Ebi Tempura.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Ebi Tempura</h4>
+                        <p>Crispy, golden-brown tempura shrimp. </p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$6.00</h3>
+                        <button class="btn" onclick="addToCart('Ebi Tempura', 6.00, '../assets/Ebi Tempura.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NORI TEMPURA -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Nori Tempura.png" alt=""></div>
+                    <div class="box-text">
+                        <h4>Nori Tempura</h4>
+                        <p>Crispy, golden-brown deep-fried nori slices.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$4.00</h3>
+                        <button class="btn" onclick="addToCart('Nori Tempura', 4.00, '../assets/Nori Tempura.png')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHICKEN KATSU -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Chicken Katsu.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Chicken Katsu</h4>
+                        <p>Crispy, deep-fried chicken breast fillet. </p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$7.00</h3>
+                        <button class="btn" onclick="addToCart('Chicken Katsu', 7.00, '../assets/Chicken Katsu.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- TEMPURA DISH: End -->
+    
+    <!-- SIDE DISH: Start -->
+    <section class="side-dish" id="side-dish">
+        <div class="center-text">
+            <h3><span>Side</span> Dish</h3>
+        </div>
+        <div class="menu-content">
+
+            <!-- GYOZA -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Gyoza.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Gyoza</h4>
+                        <p>Dumplings filled with chicken meat, onions, and spring onions.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$5.00</h3>
+                        <button class="btn" onclick="addToCart('Gyoza', 5.00, '../assets/Gyoza.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHICKEN TERIYAKI -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Teriyaki Chicken.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Chicken Teriyaki</h4>
+                        <p>Grilled meat with a simple glaze made of soy sauce, mirin, sake, and sugar.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$8.00</h3>
+                        <button class="btn" onclick="addToCart('Chicken Teriyaki', 8.00, '../assets/Teriyaki Chicken.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AJITAMA -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Ajitama.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Ajitama</h4>
+                        <p>Soft-boiled egg marinated in a sweet soy sauce.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$2.00</h3>
+                        <button class="btn" onclick="addToCart('Ajitama', 2.00, '../assets/Ajitama.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SIDE DISH: End -->
+
+    <!-- DRINKS: Start -->
+    <section class="drinks" id="drinks">
+        <div class="center-text">
+            <h3><span>Refreshing</span> Beverages</h3>
+        </div>
+        <div class="menu-content">
+
+            <!-- OCHA -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Ocha.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Ocha</h4>
+                        <p>Japanese green tea.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$2.50</h3>
+                        <button class="btn" onclick="addToCart('Ocha', 2.50, '../assets/Ocha.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LYCHEE TEA -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Lychee Tea.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Lychee Tea</h4>
+                        <p>Lychee flavored and scented tea.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$3.50</h3>
+                        <button class="btn" onclick="addToCart('Lychee Tea', 3.50, '../assets/Lychee Tea.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORANGE JUICE -->
+            <div class="box">
+                <div class="box-content">
+                    <div class="box-img"><img src="../assets/Orange Juice.jpg" alt=""></div>
+                    <div class="box-text">
+                        <h4>Orange Juice</h4>
+                        <p>Fresh squeezed oranges.</p>
+                        <h3 style="color: #8A3033; font-size: 2rem; margin-top: 10px;">$3.00</h3>
+                        <button class="btn" onclick="addToCart('Orange Juice', 3.00, '../assets/Orange Juice.jpg')" style="padding: 1rem; font-size: 1.5rem; width: 100%;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- DRINKS: End -->
+
+    <!-- FOOTER: Start -->
+    <section class="footer">
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../menu/ourmenu.html">Our Menu</a></li>
+            <li><a href="../promo/promo.html">Promo</a></li>
+            <li><a href="../about us/aboutus.html">About Us</a></li>
+            <li><a href="../contact us/contactus.html">Contact Us</a></li>
+        </ul>
+        <p class="copyright">©2026 Seif Zaki. All rights reserved</p>
+    </section>
+    <!-- FOOTER: End -->
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart 🍜</h2>
+            <i class="fas fa-times" onclick="toggleCart()" style="font-size: 2.5rem; cursor: pointer; color: white;"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- الأكل هيظهر هنا بالـ JS -->
+        </div>
+        <div class="cart-footer">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <!-- زرار مسح كل العناصر -->
+            <button class="btn" style="width: 100%; margin-top: 15px; background-color: #555;" onclick="clearCart()">Clear All Items</button>
+            <!-- زرار الدفع -->
+            <button class="btn" style="width: 100%; margin-top: 10px;" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Link to JS -->
+    <script src="script_menu.js"></script>
+
+</body>
+</html>

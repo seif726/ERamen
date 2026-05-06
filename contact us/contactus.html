@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seif Zaky">
+    <title>ERamen</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style_contactus.css">
+
+    <!-- Link of Awesome Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <!-- HEADER: Start -->
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="../home/index.html" class="logo"><img src="../assets/ERamen Logo Whole.png" alt=""></a>
+
+            <nav class="navbar">
+                <a href="../home/index.html" class="home">HOME</a>
+                <a href="../menu/ourmenu.html" class="home">OUR MENU</a>
+                <a href="../promo/promo.html" class="home">PROMO</a>
+                <a href="../about us/aboutus.html" class="home">ABOUT US</a>
+                <a href="../contact us/contactus.html" class="home">CONTACT US</a>
+            </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        </section>
+
+    </header>
+    <!-- HEADER: End -->
+
+    <section class="head">
+
+        <div class="words">
+            <h1>Have a question, comment, or suggestion?</h1>
+            <h2>We'd love to hear from you! </h2>
+        </div>
+
+    </section>
+
+    <!-- FORM: Start -->
+    <section class="form">
+
+        <div class="container">
+            <form name="custom-form" onsubmit="return validForm()">
+                <div class="form-box">
+
+                    <div class="input-row">
+                        <input type="text" placeholder="Your name" name="name" id="name">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="text" placeholder="E-mail" name="email" id="email">
+                    </div>
+
+                    <div class="input-row">
+                        <input type="text" placeholder="Phone number" name="phone" id="phone">
+                    </div>
+
+                    <div class="input-row">
+                        <select id="preference" class="box" required>
+                            <option value="" disabled selected>Preferences</option>
+                            <option value="Ramen">Ramen</option>
+                            <option value="Dry Ramen">Dry Ramen</option>
+                            <option value="Feedback">Feedback</option> <!-- الاختيار الجديد اللي إنت طلبته -->
+                            <option value="Suggestion">Suggestion</option>
+                        </select>
+                    </div>
+
+                    <div class="input-row">
+                    <textarea placeholder="Message" name="message" id="message"></textarea>
+                    </div>
+
+                    <div class="input-row">
+                        <input type="checkbox" name="conditions" id="conditions">
+                        <label for="conditions" class="check-label">I agree to receive the newsletter</label>
+                    </div>
+
+                    <input type="submit" value="Submit">
+
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- FORM: End -->
+
+    <!-- FOOTER: Start -->
+    <section class="footer">
+
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <ul class="list">
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../menu/ourmenu.html">Our Menu</a></li>
+            <li><a href="../promo/promo.html">Promo</a></li>
+            <li><a href="../about us/aboutus.html">About Us</a></li>
+            <li><a href="../contact us/contactus.html">Contact Us</a></li>
+        </ul>
+
+        <p class="copyright">©2026 Seif Zaki. All rights reserved</p>
+
+    </section>
+    <!-- FOOTER: End -->
+
+    <!-- Link to JS -->
+    <script src="script_contactus.js"></script>
+
+</body>
+</html>

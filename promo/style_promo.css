@@ -1,0 +1,392 @@
+/* This is CSS File for PROMOTION PAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+
+/* Main Components (Colors): Start */
+:root{
+    --main-color: #8A3033;
+    --light-color: #EADEDA;
+    --black: #000000;
+    --white: #ffffff;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1 rem rgb(255, 255, 255);
+}
+/* Main Components (Colors): End */
+
+/* Whole Default: Start */
+*{
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+/* Whole Default: End */
+
+/* For Selection: Start */
+*::selection{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+/* For Selection: End */
+
+/* Webkit(s): Start */
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+/* Webkit(s): End */
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    margin: 0;
+    background-color: #361213;
+}
+
+/* HEADING: Start */
+.heading{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.heading span{
+    color: #8A3033;
+}
+
+.heading h3{
+    font-weight: 800;
+}
+/* HEADING: End */
+
+/* BUTTON: Start */
+.btn{
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color:var(--white);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.btn:hover{
+    background-color:#361213;
+}
+/* BUTTON: End */
+
+/* HEADER - NAVIGATION BAR: Start */
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem 2rem;
+}
+
+.header .flex .logo img{
+    height: 5rem;
+}
+
+.header .flex .navbar a{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color:var(--white);
+    white-space: nowrap;
+}
+
+.header .flex .navbar a:hover{
+    text-decoration: solid;
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* HEADER - NAVIGATION BAR: End */
+
+/* Card: Start */
+.promo{
+    background-color: #361213;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+}
+
+.head{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.head h1{
+    color: #ffffff;
+    font-size: 5rem;
+    font-family: 'Cinzel', serif;
+}
+
+.head h2{
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #361213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.content-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-section .card{
+    flex: 1;
+    margin: 20px 20px;
+    background-color: #ffffff;
+}
+
+.content-section .card:hover{
+    transform: scale(1.05);
+}
+
+.content-section .card img{
+    width: 100%;
+    height: auto;
+}
+
+.content-section .card h2{
+    margin: 15px 0px;
+    font-size: 3rem;
+    color: #8A3033;
+}
+
+.content-section .card p{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+/* Card: End */
+
+/* Footer: Start */
+
+.footer{
+    padding: 40px 0;
+    width: 100%;
+    margin: 0;
+    background-color: var(--light-color); 
+    max-width: 100%;
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+
+.footer .social a{
+    font-size: 2rem;
+    color: var(--main-color);
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: .65;
+}
+
+.footer .social a:hover{
+    opacity: 1;
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a{
+    color: var(--main-color);
+    text-decoration: none;
+    opacity: .65;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+}
+
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+    color:var(--main-color);
+    opacity: .4;
+}
+/* Footer: End */
+
+/* Media Queries */
+@media (max-width:991px){
+
+    html{
+        font-size: 40%;
+    }
+
+    .footer{
+        padding: 40px 0;
+        width: 100%;
+        margin: 0;
+        background-color: var(--light-color); 
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width:768px){
+   
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .flex .navbar{
+        position: absolute;
+        top: 95%;
+        left: 0;
+        right: 0;
+        background-color: var(--black);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+    
+    /* Card: Start */
+    .content-section{
+        flex-direction: column;
+    }
+    
+    .content-section .card{
+        width: 100%;
+        height: auto;
+    }
+
+    /* Card: End */
+
+    .footer{
+        padding: 40px 0;
+        width: 100%;
+        margin: 0;
+        background-color: var(--light-color); 
+        max-width: 100%;
+    }
+
+    .footer .social a{
+        font-size: 1.7;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+    }
+
+    .footer ul{
+        margin-top: -10px;
+        font-size: 1.7rem;
+        line-height: 1.6;
+    }
+    
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 30%;
+    }
+
+    .footer{
+        padding: 40px 0;
+        width: 100%;
+        margin: 0;
+        background-color: var(--light-color); 
+        max-width: 100%;
+    }
+
+    .footer .social a{
+        font-size: 1.4;
+        width: 20px;
+        height: 20px;
+        line-height: 19px;
+    }
+    
+}

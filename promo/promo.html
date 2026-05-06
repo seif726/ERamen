@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seif Zaky">
+    <title>ERamen</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style_promo.css">
+
+    <!-- Link of Awesome Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <!-- HEADER: Start -->
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="../home/index.html" class="logo"><img src="../assets/ERamen Logo Whole.png" alt=""></a>
+
+            <nav class="navbar">
+                <a href="../home/index.html" class="home">HOME</a>
+                <a href="../menu/ourmenu.html" class="home">OUR MENU</a>
+                <a href="../promo/promo.html" class="home">PROMO</a>
+                <a href="../about us/aboutus.html" class="home">ABOUT US</a>
+                <a href="../contact us/contactus.html" class="home">CONTACT US</a>
+            </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        </section>
+
+    </header>
+    <!-- HEADER: End -->
+
+    <!-- CARDS: Start -->
+    <section class="promo">
+
+        <div class="head">
+            <h1>Limited-Time Offers!</h1>
+            <h2>プロモーション</h2>
+        </div>
+
+        <div class="container">
+            <div class="content-section">
+    
+                <!-- عرض التمبورا -->
+                <div class="card">
+                    <img src="../assets/Monday.png" alt="">
+                    <h2>Crunchy Monday</h2>
+                    <p>Discount every Monday 20% off for any tempura!</p>
+                    <button class="btn" style="margin-bottom: 20px;" onclick="claimPromo('TEMPURA20', this, 'Ebi Tempura', 6.00, '../assets/Ebi Tempura.jpg')">Claim & Add Tempura</button>
+                </div>
+
+                <!-- عرض جو باي -->
+                <div class="card">
+                    <img src="../assets/Gopay.png" alt="">
+                    <h2>Get more, pay less!</h2>
+                    <p>Get 10% cashback for every ramen menu using GoPay</p>
+                    <button class="btn" style="margin-bottom: 20px;" onclick="claimPromo('GOPAY10', this)">Claim 10% Off</button>
+                </div>
+
+                <!-- عرض الجيوزا -->
+                <div class="card">
+                    <img src="../assets/Midweek.png" alt="">
+                    <h2>Midweek Munchies</h2>
+                    <p>Discount every Wednesday 20% off for gyoza only</p>
+                    <button class="btn" style="margin-bottom: 20px;" onclick="claimPromo('GYOZA20', this, 'Gyoza', 5.00, '../assets/Gyoza.jpg')">Claim & Add Gyoza</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- CARDS: End -->
+
+    <!-- FOOTER: Start -->
+    <section class="footer">
+
+        <div class="social">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <ul class="list">
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../menu/ourmenu.html">Our Menu</a></li>
+            <li><a href="../promo/promo.html">Promo</a></li>
+            <li><a href="../about us/aboutus.html">About Us</a></li>
+            <li><a href="../contact us/contactus.html">Contact Us</a></li>
+        </ul>
+
+        <p class="copyright">©2026 Seif Zaki. All rights reserved</p>
+
+    </section>
+    <!-- FOOTER: End -->
+
+    <!-- Link to JS -->
+    <script src="script_promo.js"></script>
+
+</body>
+</html>
