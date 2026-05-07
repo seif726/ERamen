@@ -189,7 +189,7 @@ async function signIn() {
 
         setTimeout(() => {
 
-            window.location.href = "../home/index.html";
+            window.location.href = "../index.html";
 
         }, 1500);
 

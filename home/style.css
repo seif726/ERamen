@@ -577,5 +577,198 @@ section{
         line-height: 19px;
     }
     
+    /* DARK MODE BUTTON */
+
+.dark-btn{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
 }
 
+/* DARK MODE */
+
+body.dark-mode{
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode .header{
+    background: #1b1b1b;
+}
+
+body.dark-mode .navbar a{
+    color: white;
+}
+
+body.dark-mode .box{
+    background: #1f1f1f;
+}
+
+body.dark-mode .footer{
+    background: #1b1b1b;
+}
+
+body.dark-mode .heading h3{
+    color: white;
+}
+
+body.dark-mode .content h3,
+body.dark-mode .content p{
+    color: white;
+}
+
+/* DARK MODE BUTTON */
+
+.dark-btn{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    transition: .3s ease;
+}
+
+.dark-btn:hover{
+    transform: scale(1.1);
+}
+
+/* SMOOTH TRANSITION */
+
+body,
+.header,
+.footer,
+.box,
+.navbar a,
+.content h3,
+.content p{
+    transition: .3s ease;
+}
+
+/* DARK MODE */
+
+body.dark-mode{
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode .header{
+    background: #1b1b1b;
+}
+
+body.dark-mode .navbar a{
+    color: white;
+}
+
+body.dark-mode .box{
+    background: #1f1f1f;
+}
+
+body.dark-mode .footer{
+    background: #1b1b1b;
+}
+
+body.dark-mode .heading h3{
+    color: white;
+}
+
+body.dark-mode .content h3,
+body.dark-mode .content p{
+    color: white;
+}
+
+body.dark-mode section{
+    background: #121212;
+}
+
+body.dark-mode .popmenu,
+body.dark-mode .newmenu,
+body.dark-mode .banner{
+    background: #121212;
+}
+
+body.dark-mode .box h3{
+    color: white;
+}
+
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark-mode{
+    background: #121212;
+    color: white;
+}
+
+/* HEADER */
+body.dark-mode .header{
+    background: #111;
+}
+
+/* NAVBAR LINKS */
+body.dark-mode .navbar a{
+    color: white;
+}
+
+/* SECTIONS */
+body.dark-mode .popmenu,
+body.dark-mode .newmenu,
+body.dark-mode .banner,
+body.dark-mode .footer,
+body.dark-mode .home-bg{
+    background: #121212;
+}
+
+/* TITLES */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span{
+    color: white;
+}
+
+/* MENU BOXES */
+body.dark-mode .box{
+    background: #1e1e1e;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+.dark-btn{
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    margin-left: 15px;
+}
+/* FIX LARGE EMPTY SPACE */
+
+.popmenu .box-container,
+.newmenu .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popmenu .box-container .box,
+.newmenu .box-container .box{
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    background: #1e1e1e;
+    text-align: center;
+}
+
+.popmenu .box-container .box img,
+.newmenu .box-container .box img{
+    width: 450px;
+    max-width: 100%;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+}

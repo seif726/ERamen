@@ -33,7 +33,7 @@
 
         <!-- NAVBAR -->
         <nav class="navbar">
-
+            
             <a href="index.html" class="home">
                 HOME
             </a>
@@ -53,6 +53,11 @@
             <a href="contact us/contactus.html" class="home">
                 CONTACT US
             </a>
+
+            <!-- DARK MODE BUTTON -->
+            <button id="dark-mode-toggle" class="dark-btn">
+                🌙
+            </button>
 
             <!-- LOGIN BUTTON -->
             <a href="auth/login.html"
@@ -349,6 +354,55 @@ window.addEventListener("DOMContentLoaded", () => {
             });
 
         }
+
+    }
+
+});
+
+</script>
+
+<script>
+
+/* DARK MODE */
+
+const darkBtn =
+document.getElementById("dark-mode-toggle");
+
+// LOAD SAVED MODE
+if(localStorage.getItem("darkMode") === "enabled"){
+
+    document.body.classList.add("dark-mode");
+
+    darkBtn.innerHTML = "☀️";
+
+}
+
+// TOGGLE MODE
+darkBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    // DARK MODE ACTIVE
+    if(document.body.classList.contains("dark-mode")){
+
+        localStorage.setItem(
+            "darkMode",
+            "enabled"
+        );
+
+        darkBtn.innerHTML = "☀️";
+
+    }
+
+    // LIGHT MODE
+    else{
+
+        localStorage.setItem(
+            "darkMode",
+            "disabled"
+        );
+
+        darkBtn.innerHTML = "🌙";
 
     }
 

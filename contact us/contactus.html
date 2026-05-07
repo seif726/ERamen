@@ -10,6 +10,7 @@
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style_contactus.css">
+    <link rel="stylesheet" href="../home/style.css">
 
     <!-- Link of Awesome Font-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,14 +23,17 @@
 
         <section class="flex">
 
-            <a href="../home/index.html" class="logo"><img src="../assets/ERamen Logo Whole.png" alt=""></a>
+            <a href="../index.html" class="logo"><img src="../assets/ERamen Logo Whole.png" alt=""></a>
 
             <nav class="navbar">
-                <a href="../home/index.html" class="home">HOME</a>
+                <a href="../index.html" class="home">HOME</a>
                 <a href="../menu/ourmenu.html" class="home">OUR MENU</a>
                 <a href="../promo/promo.html" class="home">PROMO</a>
                 <a href="../about us/aboutus.html" class="home">ABOUT US</a>
                 <a href="../contact us/contactus.html" class="home">CONTACT US</a>
+                <button id="dark-mode-toggle" class="dark-btn">
+                     🌙
+                </button>
             </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -106,7 +110,7 @@
         </div>
 
         <ul class="list">
-            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../menu/ourmenu.html">Our Menu</a></li>
             <li><a href="../promo/promo.html">Promo</a></li>
             <li><a href="../about us/aboutus.html">About Us</a></li>
@@ -120,6 +124,55 @@
 
     <!-- Link to JS -->
     <script src="script_contactus.js"></script>
+
+    <script>
+
+/* DARK MODE */
+
+const darkBtn =
+document.getElementById("dark-mode-toggle");
+
+// LOAD SAVED MODE
+if(localStorage.getItem("darkMode") === "enabled"){
+
+    document.body.classList.add("dark-mode");
+
+    darkBtn.innerHTML = "☀️";
+
+}
+
+// TOGGLE MODE
+darkBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    // DARK MODE ACTIVE
+    if(document.body.classList.contains("dark-mode")){
+
+        localStorage.setItem(
+            "darkMode",
+            "enabled"
+        );
+
+        darkBtn.innerHTML = "☀️";
+
+    }
+
+    // LIGHT MODE
+    else{
+
+        localStorage.setItem(
+            "darkMode",
+            "disabled"
+        );
+
+        darkBtn.innerHTML = "🌙";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
